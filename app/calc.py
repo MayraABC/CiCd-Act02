@@ -7,10 +7,16 @@ class InvalidPermissions(Exception):
 
 class Calculator:
     def add(self, x, y):
+        if not app.util.validate_permissions(f"{x} + {y}", "user1"):
+            raise InvalidPermissions('User has no permissions')
+        
         self.check_types(x, y)
         return x + y
 
     def substract(self, x, y):
+        if not app.util.validate_permissions(f"{x} - {y}", "user1"):
+            raise InvalidPermissions('User has no permissions')
+        
         self.check_types(x, y)
         return x - y
 
@@ -22,6 +28,9 @@ class Calculator:
         return x * y
 
     def divide(self, x, y):
+        if not app.util.validate_permissions(f"{x} / {y}", "user1"):
+            raise InvalidPermissions('User has no permissions')
+
         self.check_types(x, y)
         if y == 0:
             raise TypeError("Division by zero is not possible")
@@ -29,10 +38,16 @@ class Calculator:
         return x / y
 
     def power(self, x, y):
+        if not app.util.validate_permissions(f"{x} ** {y}", "user1"):
+            raise InvalidPermissions('User has no permissions')
+
         self.check_types(x, y)
         return x ** y
 
     def sqrt(self, x):
+        if not app.util.validate_permissions(f"sqrt({x})", "user1"):
+            raise InvalidPermissions('User has no permissions')
+
         self.check_type(x)
         if x < 0:
             raise TypeError("Cannot calculate square root of a negative number")
@@ -40,9 +55,12 @@ class Calculator:
         return math.sqrt(x)
 
     def log10(self, x):
+        if not app.util.validate_permissions(f"log10({x})", "user1"):
+            raise InvalidPermissions('User has no permissions')
+
         self.check_type(x)
         if x <= 0:
-            raise TypeError("Cannot calculate logarithm of non-positive numbers")
+            raise ValueError("Cannot calculate logarithm of non-positive numbers")
 
         return math.log10(x)
 

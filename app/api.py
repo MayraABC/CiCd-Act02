@@ -69,5 +69,5 @@ def log10(op_1):
     try:
         num_1 = util.convert_to_number(op_1)
         return (f"{CALCULATOR.log10(num_1)}", http.client.OK, HEADERS)
-    except TypeError as e:
+    except (TypeError, ValueError) as e:
         return (str(e), http.client.BAD_REQUEST, HEADERS)
