@@ -6,19 +6,19 @@ def convert_to_number(operand):
         else:
             return int(operand)
 
-    except ValueError:
-        raise TypeError("Operator cannot be converted to number")
+    except ValueError as error:
+        raise TypeError("Operator cannot be converted to number") from error
 
 
-def InvalidConvertToNumber(operand):
+def invalid_convert_to_number(operand):
     try:
         if "." in operand:
-            return (float(operand))
+            return float(operand)
+        else:
+            return int(operand)
 
-        return int(operand)
-
-    except ValueError:
-        raise TypeError("Operator cannot be converted to number")
+    except ValueError as error:
+        raise TypeError("Operator cannot be converted to number") from error
 
 
 def validate_permissions(operation, user):
