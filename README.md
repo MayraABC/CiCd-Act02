@@ -216,3 +216,12 @@ make test-e2e
 ## Concepto Clave para Entender el Proyecto
 
 El archivo Makefile es el **punto de entrada único**. Cada `make <comando>` orquesta contenedores Docker, redes, volúmenes y la secuencia correcta de pasos — esto simula exactamente lo que haría un pipeline de CI/CD en Jenkins, GitLab CI o GitHub Actions.
+
+
+## Jenkins
+Puerto --> 8081
+Usuario --> MABCJenkins
+Contra --> @Mabc2026
+Mayra Alejandra Barrios Castillo
+mayrabarrioscastillo@hotmail.com
+http://localhost:8081/
