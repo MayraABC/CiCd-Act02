@@ -3,6 +3,13 @@ __pycache__/
 
 web/constants.js
 
+coverage/
+results/
+.coverage
+coverage.xml
+*_result.xml
+*_result.html
+*_result.txt
 
 
 test/e2e/cypress/screenshots
