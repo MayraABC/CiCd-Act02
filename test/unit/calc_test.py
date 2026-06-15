@@ -163,7 +163,7 @@ class TestCalculate(unittest.TestCase):
         self.assertEqual(0, self.calc.add(2, -2))
         self.assertEqual(0, self.calc.add(-2, 2))
         self.assertEqual(1, self.calc.add(1, 0))
-    
+
     #se agregan pruebas para la suma con permisos - Casos de error
     @patch('app.util.validate_permissions', return_value=mocked_validation, create=True)
     def test_add_method_fails_with_invalid_permissions(self, _validate_permissions):
@@ -204,13 +204,13 @@ class TestCalculate(unittest.TestCase):
         self.assertEqual(0.25, self.calc.power(2, -2))
         self.assertEqual(0, self.calc.power(0, 2))
         self.assertEqual(1, self.calc.power(0, 0)) # Por convención, cualquier número elevado a la potencia de 0 es igual a 1
-    
+
     #se agregan pruebas para la potenciación con permisos - Casos de error
     @patch('app.util.validate_permissions', return_value=mocked_validation, create=True)
     def test_power_method_fails_with_invalid_permissions(self, _validate_permissions):
         _validate_permissions.return_value = False
         self.assertRaises(Exception, self.calc.power, 2, 2)
-    
+
     #Se agregan pruebas para la raíz cuadrada con permisos - Casos de éxito
     @patch('app.util.validate_permissions', side_effect=mocked_validation, create=True)
     def test_sqrt_method_returns_correct_result_with_permissions(self, _validate_permissions):

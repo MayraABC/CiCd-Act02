@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>unit_result.xml</title>
+    <style type="text/css">
+        body {
+    background-color: white;
+    padding-bottom: 20em;
+    margin: 0;
+    min-height: 15cm;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: #007acc;
+    color: white;
+    padding: 3mm;
+    margin-top: 0;
+    margin-bottom: 1mm;
+}
+
+.footer {
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+    padding: 1em;
+}
+
+.testsuite {
+    padding-bottom: 2em;
+    margin-left: 1em;
+}
+
+.proplist {
+    width: 100%;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+.proplist th {
+    background-color: silver;
+    width: 5em;
+    padding: 2px;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.proplist td {
+    padding: 2px;
+    word-break: break-all;
+}
+
+.index-table {
+    width: 90%;
+    margin-left: 1em;
+}
+
+.index-table td {
+    vertical-align: top;
+    max-width: 200px;
+    word-wrap: break-word;
+}
+
+.failure-index {
+
+}
+
+.toc {
+    margin-bottom: 2em;
+    font-family: monospace;
+}
+
+.stdio, pre {
+    min-height: 1em;
+    background-color: #1e1e1e;
+    color: silver;
+    padding: 0.5em;
+}
+.tdpre {
+    background-color: #1e1e1e;
+}
+
+.test {
+    margin-left: 0.5cm;
+}
+
+.toc {
+    list-style: none;
+}
+
+.toc li.outcome {
+    list-style: none;
+}
+
+.toc li.outcome::before {
+    content: "\2022";
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.27em;
+    margin-left: -1.27em;
+    font-size: 1.2em;
+}
+
+.toc li.outcome-failed {
+    background-color: lightcoral;
+}
+
+.toc li.outcome-failed::before {
+    color: red;
+}
+
+.toc li.outcome-passed::before {
+    color: green;
+}
+
+.toc li.outcome-skipped::before {
+    color: orange;
+}
+
+.testcases .outcome {
+    border-left: 1em;
+    padding: 2px;
+}
+
+.testcases .outcome-failed {
+    border-left: 1em solid lightcoral;
+}
+
+
+.outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.outcome-skipped {
+    border-left: 1em dotted silver;
+}
+
+.testcases .outcome-passed {
+    border-left: 1em solid lightgreen;
+}
+
+.testcases .outcome-skipped {
+    border-left: 1em solid #FED8B1;
+}
+
+.stats-table {
+}
+
+.stats-table td {
+    min-width: 4em;
+    text-align: right;
+}
+
+.stats-table .failed {
+    background-color: lightcoral;
+}
+
+.stats-table .passed {
+    background-color: lightgreen;
+}
+
+.matrix-table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: available;
+    margin-left: 1em;
+}
+
+.matrix-table td {
+    vertical-align: center;
+}
+
+.matrix-table td:last-child {
+    width: 0;
+}
+
+.matrix-table tr:hover {
+    background-color: yellow;
+}
+
+.matrix-axis-name {
+    white-space: nowrap;
+    padding-right: 0.5em;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    text-align: right;
+}
+
+.matrix-axis-line {
+    border-left: 1px solid black;
+    width: 0.5em;
+}
+
+.matrix-classname {
+    text-align: left;
+    width: 100%;
+    border-top: 2px solid grey;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-casename {
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 1em;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-result {
+    display: block;
+    width: 1em;
+    text-align: center;
+    padding: 1mm;
+    margin: 0;
+}
+
+.matrix-result-combined {
+    white-space: nowrap;
+    padding-right: 0.2em;
+    text-align: right;
+}
+
+.matrix-result-failed {
+    background-color: lightcoral;
+}
+
+.matrix-result-passed {
+    background-color: lightgreen;
+}
+
+.matrix-result-skipped {
+    background-color: lightyellow;
+}
+
+.matrix-even {
+    background-color: lightgray;
+}
+    </style>
+</head>
+<body>
+    
+<h1>
+    Test Report : unit_result.xml
+</h1>
+
+
+<a id="toc"></a>
+<table class="index-table">
+    <tr>
+        <td>
+            <ul class="toc">
+            
+                
+                <li>test.unit.calc_test.TestCalculate
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#e3a4d768-9ffe-4a50-8944-978253542bdc">test_add_method_fails_with_invalid_permissions</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#01311039-ef60-40d9-9831-8208df0e6534">test_add_method_fails_with_nan_parameter</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#cf553f7a-9626-4857-b2e8-21dd47e7695a">test_add_method_falla_con_datos_errados</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#bf101a6d-a4d7-46c2-afc9-98452f7a7833">test_add_method_returns_correct_result</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#5009f61e-5a99-4789-86a1-b2a32c3f3b71">test_add_method_returns_correct_result_with_permissions</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#925a94b9-fc07-4f00-a61e-e1900281efad">test_divide_method_fails_with_division_by_zero</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#744628b5-06d6-4fb5-9db0-0b734f483194">test_divide_method_fails_with_invalid_permissions</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#a65e6d7e-4506-42da-8129-97a1833eda1b">test_divide_method_fails_with_nan_parameter</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#03839cb2-d453-473a-bb60-f677d16143e0">test_divide_method_returns_correct_result</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#fe8aba37-0895-4aa2-ba98-cc9d21d1a633">test_divide_method_returns_correct_result_with_permissions</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#b3c6d042-6918-415d-9ab1-6beafd935863">test_log10_method_fails_with_invalid_permissions</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#63471b86-7cfb-4263-97ef-bb30c71e5b57">test_log10_method_falla_con_datos_errados</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#d05a8e64-19bd-4a08-b64b-709acf2c03d8">test_log10_method_returns_correct_result</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#d7a73d35-8543-432d-a0d6-0d1b5fb6b17a">test_log10_method_returns_correct_result_with_permissions</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#2cfcc736-59b7-4809-bf24-151f7a3080e9">test_multiply_method_fails_with_invalid_permissions</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#99cb4f61-dd08-40b9-91b6-9e8cd0ca8635">test_multiply_method_falla_con_datos_errados</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#1cbff2a9-7b95-4e48-868e-a19236903ab2">test_multiply_method_returns_correct_result</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#b24d807a-8e76-4bfc-bc9d-3c8cdd130173">test_multiply_method_returns_resultado_exitoso</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#6e00886b-c754-4a4f-80f5-c1cc3e170ee8">test_power_method_fails_with_invalid_permissions</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#36694cbf-82b6-4e06-ac10-a04c7ccdb405">test_power_method_falla_con_datos_errados</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#f467b7dd-9968-4b41-bb89-aeeb21a39266">test_power_method_returns_correct_result</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#4aff91ef-9ecb-4fc7-9c85-53f32478bd7e">test_power_method_returns_correct_result_with_permissions</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#b004d663-f4c7-4c1e-a9b8-9f675fc721f6">test_sqrt_method_fails_with_invalid_permissions</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#e25e532f-8b0b-4117-a5bf-037999a8cfda">test_sqrt_method_falla_con_datos_errados</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#1fdcfa24-6217-4312-b24f-05b565df16b1">test_sqrt_method_returns_correct_result</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#6a8940e1-bbe9-488f-8408-14b548bb4235">test_sqrt_method_returns_correct_result_with_permissions</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#5c5f7059-f693-4844-aac5-9dd98e46b73a">test_substract_method_fails_with_invalid_permissions</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#27ed2e7e-5d87-48a8-af6f-e0024d6599cf">test_substract_method_falla_con_datos_errados</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#0bcd654f-a331-4f0c-aa70-5aa9e038b363">test_substract_method_returns_correct_result</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#3891805a-46e7-4378-9422-2aa1a6780b90">test_substract_method_returns_correct_result_with_permissions</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>test.unit.util_test.TestUtil
+                <ul>
+                    
+                    <li class="outcome outcome-passed"><a href="#b899acd0-d1f1-49eb-9cd9-559e9770d96d">test_convert_to_number_correct_param</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#08813027-9b35-4180-8f56-a78f82026bbc">test_convert_to_number_invalid_type</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#de757fa7-314c-47e7-8a7f-1099846be7a4">test_invalid_convert_to_number_correct_param</a></li>
+                    
+                    <li class="outcome outcome-passed"><a href="#69b20db9-7a38-4939-a40e-a696635f3c74">test_invalid_convert_to_number_invalid_type</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+            </ul>
+        </td>
+        <td class="failure-index">
+            <ul class="toc">
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+
+    <div class="testsuite">
+        <h2>Test Suite: pytest</h2>
+        <a id="235b6c91-28b3-4cfd-a278-37882f41e965"></a>
+        
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>3.714 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>34</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>test.unit.calc_test.TestCalculate</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="e3a4d768-9ffe-4a50-8944-978253542bdc"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_add_method_fails_with_invalid_permissions</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.01 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="01311039-ef60-40d9-9831-8208df0e6534"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_add_method_fails_with_nan_parameter</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="cf553f7a-9626-4857-b2e8-21dd47e7695a"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_add_method_falla_con_datos_errados</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="bf101a6d-a4d7-46c2-afc9-98452f7a7833"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_add_method_returns_correct_result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="5009f61e-5a99-4789-86a1-b2a32c3f3b71"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_add_method_returns_correct_result_with_permissions</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="925a94b9-fc07-4f00-a61e-e1900281efad"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_divide_method_fails_with_division_by_zero</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="744628b5-06d6-4fb5-9db0-0b734f483194"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_divide_method_fails_with_invalid_permissions</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="a65e6d7e-4506-42da-8129-97a1833eda1b"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_divide_method_fails_with_nan_parameter</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="03839cb2-d453-473a-bb60-f677d16143e0"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_divide_method_returns_correct_result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="fe8aba37-0895-4aa2-ba98-cc9d21d1a633"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_divide_method_returns_correct_result_with_permissions</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="b3c6d042-6918-415d-9ab1-6beafd935863"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_log10_method_fails_with_invalid_permissions</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="63471b86-7cfb-4263-97ef-bb30c71e5b57"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_log10_method_falla_con_datos_errados</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="d05a8e64-19bd-4a08-b64b-709acf2c03d8"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_log10_method_returns_correct_result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="d7a73d35-8543-432d-a0d6-0d1b5fb6b17a"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_log10_method_returns_correct_result_with_permissions</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="2cfcc736-59b7-4809-bf24-151f7a3080e9"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_multiply_method_fails_with_invalid_permissions</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="99cb4f61-dd08-40b9-91b6-9e8cd0ca8635"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_multiply_method_falla_con_datos_errados</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="1cbff2a9-7b95-4e48-868e-a19236903ab2"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_multiply_method_returns_correct_result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="b24d807a-8e76-4bfc-bc9d-3c8cdd130173"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_multiply_method_returns_resultado_exitoso</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="6e00886b-c754-4a4f-80f5-c1cc3e170ee8"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_power_method_fails_with_invalid_permissions</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="36694cbf-82b6-4e06-ac10-a04c7ccdb405"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_power_method_falla_con_datos_errados</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="f467b7dd-9968-4b41-bb89-aeeb21a39266"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_power_method_returns_correct_result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="4aff91ef-9ecb-4fc7-9c85-53f32478bd7e"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_power_method_returns_correct_result_with_permissions</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="b004d663-f4c7-4c1e-a9b8-9f675fc721f6"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_sqrt_method_fails_with_invalid_permissions</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="e25e532f-8b0b-4117-a5bf-037999a8cfda"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_sqrt_method_falla_con_datos_errados</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="1fdcfa24-6217-4312-b24f-05b565df16b1"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_sqrt_method_returns_correct_result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="6a8940e1-bbe9-488f-8408-14b548bb4235"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_sqrt_method_returns_correct_result_with_permissions</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="5c5f7059-f693-4844-aac5-9dd98e46b73a"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_substract_method_fails_with_invalid_permissions</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="27ed2e7e-5d87-48a8-af6f-e0024d6599cf"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_substract_method_falla_con_datos_errados</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="0bcd654f-a331-4f0c-aa70-5aa9e038b363"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_substract_method_returns_correct_result</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="3891805a-46e7-4378-9422-2aa1a6780b90"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_substract_method_returns_correct_result_with_permissions</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>test.unit.util_test.TestUtil</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="b899acd0-d1f1-49eb-9cd9-559e9770d96d"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_convert_to_number_correct_param</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="08813027-9b35-4180-8f56-a78f82026bbc"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_convert_to_number_invalid_type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="de757fa7-314c-47e7-8a7f-1099846be7a4"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_invalid_convert_to_number_correct_param</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="69b20db9-7a38-4939-a40e-a696635f3c74"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>test_invalid_convert_to_number_invalid_type</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.001 sec</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+<p class="footer">
+    Generated by junit2html
+</p>
+</body>
+</html>
