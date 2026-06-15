@@ -11,7 +11,6 @@ coverage.xml
 *_result.html
 *_result.txt
 
-
 test/e2e/cypress/screenshots
 test/e2e/cypress/videos
 

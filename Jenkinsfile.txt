@@ -1,0 +1,29 @@
+pipeline{
+    agent any
+    stages{
+        stage('Fuente'){
+            steps{
+                git url: 'https://github.com/MayraABC/CiCd-Act02.git', 
+                    branch: 'main'
+            }
+        }
+        stage('Construcción'){
+            steps{
+                echo '¡Etapa Construcción!'
+                bat 'make build'
+            }
+        }
+        stage('Test Unitarios'){
+            steps{
+                bat 'make test-unit'
+                archiveArtifacts artifacts: 'results/*.xml'
+            }
+        }
+    }
+    post{
+        always{
+            junit 'results/*_result.xml'
+            cleanWs()
+        }
+    }
+}
